@@ -6,7 +6,7 @@ label: Test challenge Evaluation
 doc: >
   BRIEF DESCRIPTION ABOUT THE CHALLENGE, e.g.
   This workflow will run and evaluate Docker submissions to the
-  Awesome Challenge (syn123). Metrics returned are x, y, z.
+  test challenge (syn33124422). Metrics returned are x, y, z.
 
 requirements:
   - class: StepInputExpressionRequirement
@@ -39,7 +39,7 @@ steps:
         source: "#submitterUploadSynId"
       # TODO: replace `valueFrom` with the admin user ID or admin team ID
       - id: principalid
-        valueFrom: "3379097"
+        valueFrom: "3453080"
       - id: permissions
         valueFrom: "download"
       - id: synapse_config
@@ -53,7 +53,7 @@ steps:
         source: "#adminUploadSynId"
       # TODO: replace `valueFrom` with the admin user ID or admin team ID
       - id: principalid
-        valueFrom: "3379097"
+        valueFrom: "3453080"
       - id: permissions
         valueFrom: "download"
       - id: synapse_config
@@ -170,10 +170,10 @@ steps:
         source: "#synapseConfig"
       # OPTIONAL: set `default` to `false` if log file should not be uploaded to Synapse
       - id: store
-        default: true
+        default: false
       # TODO: replace `valueFrom` with the absolute path to the data directory to be mounted
       - id: input_dir
-        valueFrom: "/tmp"
+        valueFrom: "/Users/vjoshi/aa/metal_challenge/challenge_data"
       - id: docker_script
         default:
           class: File
@@ -241,7 +241,7 @@ steps:
         source: "#validate/invalid_reasons"
       # OPTIONAL: set `default` to `false` if email notification about valid submission is needed
       - id: errors_only
-        default: true
+        default: false
     out: [finished]
 
   annotate_validation_with_output:
