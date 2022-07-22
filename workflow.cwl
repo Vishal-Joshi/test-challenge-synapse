@@ -89,7 +89,7 @@ steps:
     in:
       # TODO: replace `valueFrom` with the Synapse ID to the challenge goldstandard
       - id: synapseid
-        valueFrom: "syn18081597"
+        valueFrom: "syn33376283"
       - id: synapse_config
         source: "#synapseConfig"
     out:
@@ -286,7 +286,7 @@ steps:
       
   email_score:
     run: https://raw.githubusercontent.com/Sage-Bionetworks/ChallengeWorkflowTemplates/v3.1/cwl/score_email.cwl
-    in:
+    in:mkd
       - id: submissionid
         source: "#submissionId"
       - id: synapse_config
